@@ -1,0 +1,27 @@
+rbget: ReviewBoard patch downloader
+http://github.com/cyberguijarro/rbget
+
+rbget is a simple Python script that contacts an existing ReviewBoard
+server and uses its web API to authenticate and download the patch associated
+with a specific review id.
+
+In addition, rbget can feed the diff data to common tools such as "patch" or
+"git-apply".
+
+REQUIREMENTS
+
+Python (2.6 or higher)
+ReviewBoard
+GIT (only for use with GIT)
+patch (only for use with patch)
+
+INSTALLATION
+
+On UNIX-like operating systems, just copy "rbget.py" to any of the folders
+in your PATH environment and rename it as you like ("yapd" is my choice).
+
+USAGE
+
+rbget's syntax is:
+
+$ rbget host-name[:port] review-id [git|patch|none]
